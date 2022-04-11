@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar(this)">
+          <i class="fa-solid fa-bars"></i>
+          <!-- <i class="fa-solid fa-bars fa-2x"></i> -->
+        </div>
+        <div class="showbtn">
+          <img
+            src="img/close.png"
+            id="triangle_close"
+            onclick="toggleSidebar(this)"
+          />
+          <img
+            src="img/open.png"
+            id="triangle_open"
+            onclick="toggleSidebar(this)"
+          />
+        </div>
+        <div class="list" id="first-menu">
+          <!-- <p class="button">logo</p> -->
+          <a href="index.html"><img src="img/daegu.png" alt="" id="logo" /></a>
+          <div class="menu">
+            <p>CCTV를 경유하는 경로안내 서비스</p>
+            <button class="button" id="menu1">메뉴1</button>
+            <button class="button" id="menu2">메뉴2</button>
+          </div>
+          <div class="location">
+            <div class="navigation">
+              <i class="fa-solid fa-flag"></i>
+              <input
+                type="text"
+                placeholder="출발지를 입력하세요"
+                id="location-start"
+                class="input_text"
+              />
+              <button>✖</button>
+            </div>
+            <div class="navigation">
+              <i class="fa-solid fa-flag-checkered"></i>
+              <input
+                type="text"
+                placeholder="도착지를 입력하세요"
+                id="location"
+                class="input_text"
+              />
+              <button>✖</button>
+            </div>
+            <button class="showload">
+              <i class="fa-solid fa-person-walking" id="direction"></i>
+            </button>
+          </div>
+        </div>
+        <div class="footer_info">
+          <strong class="title_intro">
+            오늘은
+            <br />
+            어디로 안내할까요?
+          </strong>
+          <p class="content_info">
+            공공데이터를 이용해 CCTV의 위치를 확인하여
+            <br />
+            CCTV를 경유하는 최단 경로를 알려드려요.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
