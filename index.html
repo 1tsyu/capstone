@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cctv main</title>
+    <link rel="stylesheet" href="css/menu1.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="./img/cctv.ico" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/weather.js"></script>
+
+    <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xxbcb5f54ae7ab45d4829fd9e0c8afd203"></script>
+    <script type="text/javascript">
+      //Tmap
+
+
+    </script>
+  </head>
+  <body>
+    <div id="map_div"></div>
+    <div class="container">
+      <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar(this)">
+          <i class="fa-solid fa-bars" id="bars"></i>
+        </div>
+        <div class="showbtn">
+          <img
+            src="img/close.png"
+            id="triangle_close"
+            onclick="toggleSidebar(this)"
+          />
+          <img
+            src="img/open.png"
+            id="triangle_open"
+            onclick="toggleSidebar(this)"
+          />
+        </div>
+        <div id="contents1">
+          <div class="list" id="first-menu">
+            <img src="img/daegu.png" alt="" id="logo" />
+            <div class="menu">
+              <p>CCTV를 경유하는 경로안내 서비스</p>
+              <button
+                class="button"
+                id="menu1"
+                onclick="change(0)"
+              >
+                경로안내
+              </button>
+              <button
+                class="button"
+                id="menu2"
+                onclick="change(1)"
+              >
+                주변탐색
+              </button>
+            </div>
+            <div class="location">
+              <div class="navigation">
+                <i class="fa-solid fa-flag"></i>
+                <input
+                  type="text"
+                  placeholder="출발지를 입력하세요"
+                  id="location-start"
+                  class="input_text"
+                />
+                <button>✖</button>
+              </div>
+              <div class="navigation">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <input
+                  type="text"
+                  placeholder="도착지를 입력하세요"
+                  id="location"
+                  class="input_text"
+                />
+                <button>✖</button>
+              </div>
+              <button class="showload">
+                <i class="fa-solid fa-person-walking" id="direction" onclick="change(2)"></i>
+              </button>
+            </div>
+          </div>
+          <div class="footer_info">
+            <div id="footer_info_1">
+            <strong class="title_intro">
+              오늘은
+              <br />
+              어디로 안내할까요?
+            </strong>
+            <p class="content_info">
+              공공데이터를 이용해 CCTV의 위치를 확인하여
+              <br />
+              CCTV를 경유하는 최단 경로를 알려드려요.
+            </p>
+          </div>
+          <div id="footer_info_2">
+            <img src="img/person.png" alt="" id="person">
+            <p id="time">
+              
+            </p>
+            <p id="length">
+              
+            </p>
+          </div>
+          </div>
+          <div class="footer_img">
+            <img src="img/footer_img.jpg" />
+          </div>
+        </div>
+        <div id="contents2">
+          <div class="list" id="first-menu2">
+            <img src="img/daegu.png" alt="" id="logo" />
+            <div class="menu">
+              <p>CCTV를 경유하는 경로안내 서비스</p>
+              <button
+                class="button"
+                id="menu1"
+                onclick="change(0)"
+              >
+                경로안내
+              </button>
+              <button
+                class="button"
+                id="menu2"
+                onclick="change(1)"
+              >
+                주변탐색
+              </button>
+            </div>
+          </div>
+          <div class="footer_info2">
+            <div class="weather">
+              <span class="City"></span>
+              <br>
+              <span class="CurrIcon"></span>
+              <span class="CurrTemp"></span>
+            </div>
+            <div>
+              <strong class="title_intro">
+                대명동에 관련된
+              <br />
+               정보를 알려주는 메뉴 입니다.
+              </strong>
+            </div>
+            
+            <div class="footer_img">
+              <img src="img/footer_img.jpg">
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
